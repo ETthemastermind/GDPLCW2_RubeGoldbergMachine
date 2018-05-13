@@ -7,7 +7,7 @@ TagManager:
   - Ball
   - Bucket
   - CannonFloor
-  - Test
+  - CameraTrigger
   layers:
   - Default
   - TransparentFX
