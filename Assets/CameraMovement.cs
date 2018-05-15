@@ -10,6 +10,11 @@ public class CameraMovement : MonoBehaviour
     public Transform WreckingBall;
     public Transform Dominos;
     public Transform Dominos2;
+    public Transform Dominos3;
+    public Transform Dominos4;
+    public Transform Dominos5;
+    public Transform Dominos6;
+    public Transform Dominos7;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
     private int CameraToChange = 0;
@@ -54,6 +59,7 @@ public class CameraMovement : MonoBehaviour
             Vector3 desiredPosition = Dominos.position + offset;
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
             transform.position = smoothedPosition;
+            transform.LookAt(Dominos);
 
         }
 
@@ -62,8 +68,39 @@ public class CameraMovement : MonoBehaviour
             Vector3 desiredPosition = Dominos2.position + offset;
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
             transform.position = smoothedPosition;
+            transform.LookAt(Dominos2);
 
         }
+
+        if (CameraToChange == 5)
+        {
+            Vector3 desiredPosition = Dominos3.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+            transform.LookAt(Dominos3);
+        }
+
+        if (CameraToChange == 6)
+        {
+            Vector3 desiredPosition = Dominos4.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+            transform.LookAt(Dominos4);
+        }
+
+        if (CameraToChange == 7)
+        {
+            Vector3 desiredPosition = Dominos5.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+            transform.LookAt(Dominos5);
+        }
+
+        
+
+
+
+
 
 
 
