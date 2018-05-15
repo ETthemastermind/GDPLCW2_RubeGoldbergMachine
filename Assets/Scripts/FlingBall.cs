@@ -14,15 +14,7 @@ public class FlingBall : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.tag == "Test")
-        {
-            Debug.Log("Penis");
-        }
-
-    }
-
+    
     // Update is called once per frame
     void Update ()
     {

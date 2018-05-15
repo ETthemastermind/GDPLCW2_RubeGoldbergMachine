@@ -10,8 +10,10 @@ public class CameraMovement : MonoBehaviour
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
     private int CameraToChange = 0;
+    
 
-    private void FixedUpdate()
+    
+      private void FixedUpdate()
     {
 
 
@@ -19,6 +21,7 @@ public class CameraMovement : MonoBehaviour
         CamChange changeCam = CameraChange.GetComponent<CamChange>();
         CameraToChange = changeCam.ChangeCam;
         //Debug.Log(CameraToChange);
+        
 
 
         if (CameraToChange == 0)
@@ -35,6 +38,12 @@ public class CameraMovement : MonoBehaviour
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
             transform.position = smoothedPosition;
         }
+
+    
+        
+
+
+
         
 
     }

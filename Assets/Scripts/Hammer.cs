@@ -36,7 +36,7 @@ public class Hammer : MonoBehaviour
 
         if (HammerActivate == true)
         {
-            Debug.Log("It's Clobberin' Time!");
+            //Debug.Log("It's Clobberin' Time!");
             Vector3 rotateCenter = originalPos + rotateCenterOffset;
 
             transform.RotateAround(rotateCenter, rotateAxis, speed * Time.deltaTime);
