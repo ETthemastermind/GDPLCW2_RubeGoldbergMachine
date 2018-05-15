@@ -13,8 +13,7 @@ public class CameraMovement : MonoBehaviour
     public Transform Dominos3;
     public Transform Dominos4;
     public Transform Dominos5;
-    public Transform Dominos6;
-    public Transform Dominos7;
+    public Transform LastDomino;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
     private int CameraToChange = 0;
@@ -96,6 +95,12 @@ public class CameraMovement : MonoBehaviour
             transform.LookAt(Dominos5);
         }
 
+        if (CameraToChange == 8)
+        {
+            Vector3 desiredPosition = LastDomino.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+        }
         
 
 
