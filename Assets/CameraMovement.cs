@@ -8,6 +8,8 @@ public class CameraMovement : MonoBehaviour
     public Transform Ball1;
     public Transform Ball2;
     public Transform WreckingBall;
+    public Transform Dominos;
+    public Transform Dominos2;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
     private int CameraToChange = 0;
@@ -16,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     
       private void FixedUpdate()
     {
-        Debug.Log(CameraToChange);
+        //Debug.Log(CameraToChange);
 
         GameObject CameraChange = GameObject.Find("Ball1");
         CamChange changeCam = CameraChange.GetComponent<CamChange>();
@@ -46,6 +48,23 @@ public class CameraMovement : MonoBehaviour
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
             transform.position = smoothedPosition;
         }
+
+        if(CameraToChange == 3)
+        {
+            Vector3 desiredPosition = Dominos.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+
+        }
+
+        if (CameraToChange == 4)
+        {
+            Vector3 desiredPosition = Dominos2.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+
+        }
+
 
 
 

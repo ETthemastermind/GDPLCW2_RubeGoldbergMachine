@@ -8,7 +8,7 @@ public class CamChange : MonoBehaviour {
 	void Start ()
     {
 
-        Debug.Log(ChangeCam);
+        //Debug.Log(ChangeCam);
 		
 	}
     private void OnTriggerEnter(Collider other)
@@ -16,8 +16,8 @@ public class CamChange : MonoBehaviour {
         if (other.gameObject.tag == "CameraTrigger")
         {
             ChangeCam = ChangeCam + 1;
-            Debug.Log("Camera change imminent");
-            Debug.Log(ChangeCam);
+            //Debug.Log("Camera change imminent");
+            //Debug.Log(ChangeCam);
 
         }
         
