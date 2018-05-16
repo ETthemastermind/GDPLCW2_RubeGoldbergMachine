@@ -4,9 +4,23 @@ using UnityEngine;
 
 public class TargetHit : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    private Rigidbody rb;
+
+    // Use this for initialization
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "DunkPaddleTank")
+        {
+            Debug.Log("Dunked");
+          
+            rb.constraints &= ~RigidbodyConstraints.None; 
+
+        }
+    }
+    void Start ()
+    {
+        rb = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
