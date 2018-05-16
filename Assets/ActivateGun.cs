@@ -47,7 +47,7 @@ public class ActivateGun : MonoBehaviour {
             if (BulletFired == false && Fire == true)
             {
                 bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-                bullet.GetComponent<Rigidbody>().AddForce(Vector3.left * speed);
+                bullet.GetComponent<Rigidbody>().velocity = (Vector3.left * speed);
                 BulletFired = true;
             }
         }

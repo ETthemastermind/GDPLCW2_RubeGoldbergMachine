@@ -14,7 +14,7 @@ public class HammerHit : MonoBehaviour {
         if (collision.gameObject.name == "Hammer")
         {
             //Debug.Log("FORRRRRR!");
-            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.left * speed);
+            gameObject.GetComponent<Rigidbody>().velocity = (Vector3.left * speed);
         }
     }
     // Update is called once per frame

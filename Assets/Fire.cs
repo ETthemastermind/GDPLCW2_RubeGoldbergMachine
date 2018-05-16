@@ -23,8 +23,8 @@ public class Fire : MonoBehaviour {
             if (BulletFired == false)
             {
                 bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-                bullet.GetComponent<Rigidbody>().AddForce(Vector3.left * speed);
-                BulletFired = true;
+                bullet.GetComponent<Rigidbody>().velocity = (Vector3.left * speed);
+                //BulletFired = true;
             }
 
 

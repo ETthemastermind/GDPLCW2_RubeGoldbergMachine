@@ -9,6 +9,8 @@ TagManager:
   - CannonFloor
   - CameraTrigger
   - Domino
+  - Bullet
+  - DominoBall
   layers:
   - Default
   - TransparentFX
