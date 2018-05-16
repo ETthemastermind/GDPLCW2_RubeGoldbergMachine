@@ -11,6 +11,7 @@ TagManager:
   - Domino
   - Bullet
   - DominoBall
+  - DunkTankPaddle
   layers:
   - Default
   - TransparentFX
