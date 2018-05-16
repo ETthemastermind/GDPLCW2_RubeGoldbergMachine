@@ -13,14 +13,24 @@ public class CameraMovement : MonoBehaviour
     public Transform Dominos3;
     public Transform Dominos4;
     public Transform Dominos5;
-    public Transform LastDomino;
+    public Transform Ball3;
+    public Transform Gun;
+    public Vector3 GunRotationOffset;
+    private float CurrentYAngle;
+    private float YAngle;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
+    public Vector3 GunOffset;
     private int CameraToChange = 0;
-    
+    private float speed = 5f;
 
-    
-      private void FixedUpdate()
+
+
+    private void Start()
+    {
+        
+    }
+    private void FixedUpdate()
     {
         //Debug.Log(CameraToChange);
 
@@ -97,11 +107,31 @@ public class CameraMovement : MonoBehaviour
 
         if (CameraToChange == 8)
         {
-            Vector3 desiredPosition = LastDomino.position + offset;
+            Vector3 desiredPosition = Ball3.position + offset;
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
             transform.position = smoothedPosition;
         }
-        
+
+        if (CameraToChange == 9)
+        {
+            
+            Vector3 desiredPosition = Gun.position + GunOffset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+
+
+            CurrentYAngle = (gameObject.transform.rotation.eulerAngles.y); //assigns the Z angle to its variable
+            int GunYAngle = (int)CurrentYAngle;
+            transform.Rotate(GunRotationOffset * speed * Time.deltaTime);
+            Debug.Log(GunYAngle);
+
+            if (GunYAngle > 240 )
+            {
+                
+                speed = 0f;
+            }
+        }
+
 
 
 
