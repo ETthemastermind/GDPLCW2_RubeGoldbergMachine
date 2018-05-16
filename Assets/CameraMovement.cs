@@ -123,7 +123,8 @@ public class CameraMovement : MonoBehaviour
             CurrentYAngle = (gameObject.transform.rotation.eulerAngles.y); //assigns the Z angle to its variable
             int GunYAngle = (int)CurrentYAngle;
             transform.Rotate(GunRotationOffset * speed * Time.deltaTime);
-            Debug.Log(GunYAngle);
+            
+
 
             if (GunYAngle > 240 )
             {
