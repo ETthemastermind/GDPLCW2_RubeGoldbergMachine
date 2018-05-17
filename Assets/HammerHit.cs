@@ -11,10 +11,21 @@ public class HammerHit : MonoBehaviour {
 	}
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Hammer")
+        if (collision.gameObject.tag == "hammer")
         {
-            //Debug.Log("FORRRRRR!");
-            gameObject.GetComponent<Rigidbody>().velocity = (Vector3.left * speed);
+            Debug.Log("FORRRRRR!");
+            if (gameObject.tag == "Ball")
+            {
+                gameObject.GetComponent<Rigidbody>().AddForce(Vector3.left * speed);
+            }
+
+            if (gameObject.tag == "knife")
+            {
+                Debug.Log("Hammer Hit Knife");
+                gameObject.GetComponent<Rigidbody>().AddForce(Vector3.back * speed);
+
+            }
+            
         }
     }
     // Update is called once per frame

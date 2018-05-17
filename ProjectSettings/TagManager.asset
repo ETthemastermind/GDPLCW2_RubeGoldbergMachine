@@ -12,6 +12,9 @@ TagManager:
   - Bullet
   - DominoBall
   - DunkTankPaddle
+  - DTOverflow
+  - hammer
+  - knife
   layers:
   - Default
   - TransparentFX
