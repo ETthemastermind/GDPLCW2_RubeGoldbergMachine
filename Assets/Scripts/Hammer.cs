@@ -11,6 +11,7 @@ public class Hammer : MonoBehaviour
     private Vector3 originalPos;
     private Vector3 rotateCenter;
     private bool HammerActivate = false;
+    private bool HammerSpinUnit = false;
 
     
     
@@ -27,9 +28,22 @@ public class Hammer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("in the muller zone");
-        HammerActivate = true;
+        if (gameObject.name == "Hammer")
+        {
+            Debug.Log("in the muller zone");
+            HammerActivate = true;
+        }
         
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (gameObject.name == "SpinnyHammerThing")
+        {
+            Debug.Log(HammerSpinUnit);
+            HammerSpinUnit = true;
+        }
     }
     void Update ()
     {
@@ -39,7 +53,15 @@ public class Hammer : MonoBehaviour
             //Debug.Log("It's Clobberin' Time!");
             Vector3 rotateCenter = originalPos + rotateCenterOffset;
 
-            transform.RotateAround(rotateCenter, rotateAxis, speed * Time.deltaTime);
+            gameObject.transform.RotateAround(rotateCenter, rotateAxis, speed * Time.deltaTime);
+        }
+
+        if (HammerSpinUnit == true)
+        {
+            //Debug.Log("It's Clobberin' Time!");
+            Vector3 rotateCenter = originalPos + rotateCenterOffset;
+
+            gameObject.transform.RotateAround(rotateCenter, rotateAxis, speed * Time.deltaTime);
         }
 
 
