@@ -13,14 +13,21 @@ public class CameraMovement : MonoBehaviour
     public Transform Dominos3;
     public Transform Dominos4;
     public Transform Dominos5;
+    public Transform Dominos6;
     public Transform Ball3;
     public Transform Gun;
+    public Transform Ramp;
+    public Transform Hammer;
+    public Transform Boot;
     public Vector3 GunRotationOffset;
     private float CurrentYAngle;
     private float YAngle;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
     public Vector3 GunOffset;
+    public Vector3 HammerOffset;
+    public Vector3 RampOffset;
+    public Vector3 BootOffset;
     private int CameraToChange = 0;
     private float speed = 5f;
 
@@ -107,12 +114,19 @@ public class CameraMovement : MonoBehaviour
 
         if (CameraToChange == 8)
         {
-            Vector3 desiredPosition = Ball3.position + offset;
+            Vector3 desiredPosition = Dominos6.position + offset;
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
             transform.position = smoothedPosition;
         }
 
         if (CameraToChange == 9)
+        {
+            Vector3 desiredPosition = Dominos6.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+        }
+
+        if (CameraToChange == 10)
         {
             
             Vector3 desiredPosition = Gun.position + GunOffset;
@@ -131,6 +145,30 @@ public class CameraMovement : MonoBehaviour
                 
                 speed = 0f;
             }
+        }
+
+        if (CameraToChange == 11)
+        {
+            Vector3 desiredPosition = Ramp.position + RampOffset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+
+        }
+
+        if (CameraToChange == 12)
+        {
+            Vector3 desiredPosition = Hammer.position + HammerOffset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+
+        }
+
+        if (CameraToChange == 13)
+        {
+            Vector3 desiredPosition = Boot.position + BootOffset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+
         }
 
 

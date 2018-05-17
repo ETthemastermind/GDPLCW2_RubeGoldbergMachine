@@ -17,7 +17,7 @@ public class CamChange : MonoBehaviour {
         {
             ChangeCam = ChangeCam + 1;
             //Debug.Log("Camera change imminent");
-            //Debug.Log(ChangeCam);
+            Debug.Log(ChangeCam);
 
         }
         

@@ -15,6 +15,7 @@ TagManager:
   - DTOverflow
   - hammer
   - knife
+  - rope
   layers:
   - Default
   - TransparentFX
