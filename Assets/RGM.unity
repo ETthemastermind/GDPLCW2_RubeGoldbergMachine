@@ -38,11 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 11
   m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -77,17 +77,20 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_ShadowMaskMode: 2
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -107,6 +110,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &5093917
 GameObject:
@@ -152,6 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: d0e5e9139d826424f910171372ef1cc8, type: 3}
   HitSound2: {fileID: 0}
@@ -164,6 +170,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -179,6 +186,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -313,6 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -436,6 +445,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -451,6 +461,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -510,6 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -620,6 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -730,6 +743,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -745,6 +759,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -812,6 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -922,6 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -1033,6 +1050,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1048,6 +1066,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1130,6 +1149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -1240,6 +1260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -1363,6 +1384,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1378,6 +1400,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1481,6 +1504,101 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &146675711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146675704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+  BallFlingException: 0
+  HitSound: {fileID: 8300000, guid: e1dfe1ff211b12e44b0f9d042e597a55, type: 3}
+  HitSound2: {fileID: 0}
+--- !u!82 &146675712
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146675704}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &158130776 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1186866893693258, guid: 77e3de5dfe147d1478dab8cd32877fbd,
@@ -1508,6 +1626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -1618,6 +1737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -1816,6 +1936,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1831,6 +1952,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1927,6 +2049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -2037,6 +2160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -2147,6 +2271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -2257,6 +2382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -2367,6 +2493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -2477,6 +2604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -2587,6 +2715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -3042,6 +3171,8 @@ HingeJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!54 &272657264
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3066,6 +3197,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3081,6 +3213,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -3119,6 +3252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 0.3
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: 3d60b36ec2c6b554c80f772620e512a9, type: 3}
   HitSound2: {fileID: 0}
@@ -3229,6 +3363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -3339,6 +3474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -3449,6 +3585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -3559,6 +3696,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3574,6 +3712,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -3946,6 +4085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -4069,6 +4209,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4084,6 +4225,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4138,6 +4280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -4248,6 +4391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -4358,6 +4502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -4521,6 +4666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -4631,6 +4777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -4746,6 +4893,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4761,6 +4909,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4828,6 +4977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -4938,6 +5088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -5048,6 +5199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -5144,9 +5296,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
 --- !u!4 &354979145 stripped
@@ -5162,6 +5314,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -5177,6 +5330,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -5196,6 +5350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: 2159b8ac3f663504b82b20041baa8703, type: 3}
   HitSound2: {fileID: 0}
@@ -5268,6 +5423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -5431,6 +5587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -5541,6 +5698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -5755,6 +5913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -5918,6 +6077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -6033,6 +6193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -6143,6 +6304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -6253,6 +6415,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -6268,6 +6431,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -6335,6 +6499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -6450,6 +6615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -6591,6 +6757,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8b681ac65486f48ba5e37d5f6eea9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &535661548
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 535661539}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &536040178
 GameObject:
   m_ObjectHideFlags: 0
@@ -6633,9 +6879,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 387a2d53c7eaa1d45a280442bb0d74b1, type: 3}
 --- !u!114 &536563629
@@ -6649,8 +6895,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
-  HitSound: {fileID: 8300000, guid: 2159b8ac3f663504b82b20041baa8703, type: 3}
+  HitSound: {fileID: 8300000, guid: cc79c065fa22f6141b09244c47cca9a3, type: 3}
   HitSound2: {fileID: 0}
 --- !u!82 &536563630
 AudioSource:
@@ -6759,6 +7006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -6878,6 +7126,8 @@ HingeJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 1
   m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!54 &548704458
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6921,6 +7171,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.082341455, y: 0.47439012, z: 0.03689447}
   m_Center: {x: -0.000000003725291, y: -8.881782e-16, z: 0.04371562}
+--- !u!82 &548704465
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548704456}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &548704466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548704456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 0.6
+  BallFlingException: 0
+  HitSound: {fileID: 8300000, guid: bdb7941466be870459f3b100f5bbc439, type: 3}
+  HitSound2: {fileID: 0}
 --- !u!1 &550073037 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1040309838113534, guid: 77e3de5dfe147d1478dab8cd32877fbd,
@@ -6948,6 +7293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -7071,6 +7417,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -7086,6 +7433,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -7126,9 +7474,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 387a2d53c7eaa1d45a280442bb0d74b1, type: 3}
 --- !u!1001 &578106013
@@ -7467,6 +7815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -7616,11 +7965,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!4 &590325483
 Transform:
   m_ObjectHideFlags: 0
@@ -7800,6 +8149,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -7815,6 +8165,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -7869,6 +8220,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -7884,6 +8236,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -7951,6 +8304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -8061,6 +8415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -8171,6 +8526,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -8186,6 +8542,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -8253,6 +8610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -8363,6 +8721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -8473,6 +8832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -8596,6 +8956,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -8611,6 +8972,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -8730,6 +9092,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -8745,6 +9108,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -8796,6 +9160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -8892,9 +9257,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: aa14191e933f6d14a938f7c747be2570, type: 3}
 --- !u!1 &669316945
@@ -8963,6 +9328,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -8978,6 +9344,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -9020,6 +9387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -9130,6 +9498,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -9145,6 +9514,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -9225,6 +9595,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -9240,6 +9611,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -9294,6 +9666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -9425,6 +9798,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -9440,6 +9814,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -9607,9 +9982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 1
   HitSound: {fileID: 8300000, guid: 25b77e0efb9e00c43afbf10057ba1d19, type: 3}
-  HitSound2: {fileID: 8300000, guid: 5383567c0d3e9624e9fd7524fd7d1ddc, type: 3}
+  HitSound2: {fileID: 8300000, guid: b7af3e8f316ea934cbdcbc828bd43a13, type: 3}
 --- !u!1 &722691760 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1076789405889402, guid: 77e3de5dfe147d1478dab8cd32877fbd,
@@ -9658,6 +10034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -9768,6 +10145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -9906,6 +10284,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -9921,6 +10300,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -9988,6 +10368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -10098,6 +10479,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -10113,6 +10495,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -10180,6 +10563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -10303,6 +10687,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -10318,6 +10703,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -10385,6 +10771,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -10400,6 +10787,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -10438,6 +10826,8 @@ GameObject:
   - component: {fileID: 759833709}
   - component: {fileID: 759833708}
   - component: {fileID: 759833707}
+  - component: {fileID: 759833712}
+  - component: {fileID: 759833711}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -10454,6 +10844,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -10469,6 +10860,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -10509,6 +10901,101 @@ Transform:
   m_Father: {fileID: 975915307}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+--- !u!82 &759833711
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 759833706}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &759833712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 759833706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+  BallFlingException: 0
+  HitSound: {fileID: 8300000, guid: b7af3e8f316ea934cbdcbc828bd43a13, type: 3}
+  HitSound2: {fileID: 0}
 --- !u!1 &762652497 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1621945907927378, guid: 77e3de5dfe147d1478dab8cd32877fbd,
@@ -10536,6 +11023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -10646,6 +11134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -10756,6 +11245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -10866,6 +11356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -10976,6 +11467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -11086,6 +11578,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -11101,6 +11594,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -11265,6 +11759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -11375,6 +11870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -11523,6 +12019,8 @@ HingeJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!54 &837676211
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11547,6 +12045,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -11562,6 +12061,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -11655,6 +12155,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -11670,6 +12171,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -11712,6 +12214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -11827,6 +12330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -12000,6 +12504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -12110,6 +12615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -12233,6 +12739,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -12248,6 +12755,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -12366,6 +12874,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -12381,6 +12890,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -12432,6 +12942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -12553,6 +13064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -12663,6 +13175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -12773,6 +13286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -12883,6 +13397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -12993,6 +13508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -13103,6 +13619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -13239,6 +13756,8 @@ HingeJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!54 &942541540
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13263,6 +13782,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -13278,6 +13798,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -13372,6 +13893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -13482,6 +14004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -13592,6 +14115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -13702,6 +14226,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -13717,6 +14242,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -14101,6 +14627,8 @@ GameObject:
   - component: {fileID: 976951790}
   - component: {fileID: 976951793}
   - component: {fileID: 976951792}
+  - component: {fileID: 976951795}
+  - component: {fileID: 976951794}
   m_Layer: 0
   m_Name: InteriorDoor
   m_TagString: Untagged
@@ -14131,6 +14659,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -14146,6 +14675,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -14189,6 +14719,101 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &976951794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976951788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+  BallFlingException: 0
+  HitSound: {fileID: 8300000, guid: 2ea3d94db14369441a7c90014fa6fc89, type: 3}
+  HitSound2: {fileID: 0}
+--- !u!82 &976951795
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976951788}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &979190576
 GameObject:
   m_ObjectHideFlags: 0
@@ -14303,6 +14928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -14426,6 +15052,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -14441,6 +15068,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -14497,6 +15125,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -14512,6 +15141,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -14566,6 +15196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -14750,6 +15381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -14860,6 +15492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -14970,6 +15603,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -14985,6 +15619,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -15052,6 +15687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -15226,6 +15862,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -15241,6 +15878,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -15308,6 +15946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -15431,6 +16070,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -15446,6 +16086,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -15500,6 +16141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -15610,6 +16252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -15720,6 +16363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -15830,6 +16474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -15940,6 +16585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -16066,6 +16712,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -16081,6 +16728,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -16098,9 +16746,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1086033686
@@ -16136,6 +16784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: 6b37008bcdc60bc4eb79cad6d3b85118, type: 3}
   HitSound2: {fileID: 0}
@@ -16246,6 +16895,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -16261,6 +16911,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -16328,6 +16979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -16438,6 +17090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -16549,15 +17202,95 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 0e30d5499366d9f4caf6525201c4062c, type: 3}
 --- !u!4 &1138832507 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0e30d5499366d9f4caf6525201c4062c, type: 3}
   m_PrefabInternal: {fileID: 1005584041}
+--- !u!82 &1138832508
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138832501}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &1138832509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16573,6 +17306,21 @@ MonoBehaviour:
   Hammer2speed: 50
   rotateCenterOffset: {x: 0, y: 0, z: -5}
   rotateAxis: {x: 0, y: 1, z: 0}
+--- !u!114 &1138832510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138832501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
+  BallFlingException: 0
+  HitSound: {fileID: 8300000, guid: 6a022509da7053140b3086f3e396ccba, type: 3}
+  HitSound2: {fileID: 0}
 --- !u!1 &1148566518
 GameObject:
   m_ObjectHideFlags: 0
@@ -16613,6 +17361,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -16628,6 +17377,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -16683,6 +17433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -16793,6 +17544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -16921,6 +17673,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -16936,6 +17689,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -16961,9 +17715,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300004, guid: d8ddeb3068867eb498a195c77e559612, type: 3}
 --- !u!114 &1154228877
@@ -17085,6 +17839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: 1478bfbadceea724995c9be891bddd4f, type: 3}
   HitSound2: {fileID: 0}
@@ -17120,6 +17875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -17331,6 +18087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -17526,6 +18283,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -17541,6 +18299,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -17579,6 +18338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: d0e5e9139d826424f910171372ef1cc8, type: 3}
   HitSound2: {fileID: 0}
@@ -17689,6 +18449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -17810,6 +18571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -17920,6 +18682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -18050,6 +18813,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -18065,6 +18829,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -18138,6 +18903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: 1478bfbadceea724995c9be891bddd4f, type: 3}
   HitSound2: {fileID: 0}
@@ -18320,6 +19086,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -18335,6 +19102,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -18459,6 +19227,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -18474,6 +19243,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -18554,6 +19324,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -18569,6 +19340,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -18613,9 +19385,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 4a9fc900abba9264c94156019e1e20f8, type: 3}
 --- !u!1 &1267505116 stripped
@@ -18645,6 +19417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -18755,6 +19528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -18865,6 +19639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -18985,6 +19760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -19095,6 +19871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -19210,6 +19987,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -19225,6 +20003,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -19297,6 +20076,8 @@ HingeJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!54 &1315655246
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19334,6 +20115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: 54e18f3e9330c02419409268c2e528a7, type: 3}
   HitSound2: {fileID: 0}
@@ -19459,6 +20241,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -19474,6 +20257,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -19512,6 +20296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: d0e5e9139d826424f910171372ef1cc8, type: 3}
   HitSound2: {fileID: 0}
@@ -19636,6 +20421,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -19651,6 +20437,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -19718,6 +20505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -19828,6 +20616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -19938,6 +20727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -20048,6 +20838,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -20063,6 +20854,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -20143,6 +20935,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -20158,6 +20951,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -20212,6 +21006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -20322,6 +21117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -20432,6 +21228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -20595,6 +21392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -20705,6 +21503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -20869,6 +21668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -20979,6 +21779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -21102,6 +21903,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -21117,6 +21919,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -21171,6 +21974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -21281,6 +22085,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -21296,6 +22101,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -21405,6 +22211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -21515,6 +22322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -21641,6 +22449,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -21656,6 +22465,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -21694,6 +22504,8 @@ FixedJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!54 &1518818468
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21741,6 +22553,8 @@ HingeJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &1520098852 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297079334929626, guid: 77e3de5dfe147d1478dab8cd32877fbd,
@@ -21768,6 +22582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -21931,6 +22746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -22101,6 +22917,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -22116,6 +22933,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -22260,6 +23078,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -22275,6 +23094,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -22326,6 +23146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -22541,6 +23362,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -22556,6 +23378,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -22711,6 +23534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -22821,6 +23645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -22931,6 +23756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -23094,6 +23920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -23262,6 +24089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -23362,9 +24190,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
 --- !u!1 &1617043053 stripped
@@ -23394,6 +24222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -23504,6 +24333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -23614,6 +24444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -23724,6 +24555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -23834,6 +24666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -23957,6 +24790,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -23972,6 +24806,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -24026,6 +24861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -24136,6 +24972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -24246,6 +25083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -24356,6 +25194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -24466,6 +25305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -24576,6 +25416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -24686,6 +25527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -24796,6 +25638,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -24811,6 +25654,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -24878,6 +25722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -24988,6 +25833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -25098,6 +25944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -25208,6 +26055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -25318,6 +26166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -25428,6 +26277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -25538,6 +26388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -25648,6 +26499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -25758,6 +26610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -25900,6 +26753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -26010,6 +26864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -26120,6 +26975,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -26135,6 +26991,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -26202,6 +27059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -26312,6 +27170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -26422,6 +27281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -26532,6 +27392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -26642,6 +27503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -26752,6 +27614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -26862,6 +27725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -26972,6 +27836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -27146,6 +28011,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -27161,6 +28027,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -27212,6 +28079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -27312,9 +28180,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300004, guid: 387a2d53c7eaa1d45a280442bb0d74b1, type: 3}
 --- !u!114 &1829846778
@@ -27398,6 +28266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -27508,6 +28377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -27618,6 +28488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -27728,6 +28599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -28228,6 +29100,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -28243,6 +29116,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -28312,6 +29186,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -28327,6 +29202,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -28386,6 +29262,8 @@ HingeJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!54 &1924220285
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28565,6 +29443,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -28580,6 +29459,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -28767,6 +29647,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -28782,6 +29663,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -28866,6 +29748,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -28881,6 +29764,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -28933,7 +29817,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999997, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000009914717, y: -0.48893017, z: 0.00000072800276}
+  m_ConnectedAnchor: {x: -0.0000009914717, y: -0.48893014, z: 0.0000007280027}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -28955,6 +29839,8 @@ HingeJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &1974172805 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1621945907927378, guid: 77e3de5dfe147d1478dab8cd32877fbd,
@@ -28982,6 +29868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -29218,6 +30105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: 6a022509da7053140b3086f3e396ccba, type: 3}
   HitSound2: {fileID: 0}
@@ -29248,6 +30136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -29358,6 +30247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -29806,6 +30696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -29916,6 +30807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -30026,6 +30918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -30143,6 +31036,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -30158,6 +31052,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -30209,6 +31104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 0.3
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: 3d60b36ec2c6b554c80f772620e512a9, type: 3}
   HitSound2: {fileID: 0}
@@ -30332,6 +31228,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -30347,6 +31244,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -30401,6 +31299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -30524,6 +31423,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -30539,6 +31439,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -30593,6 +31494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -30703,6 +31605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -30815,6 +31718,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -30830,6 +31734,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -30905,6 +31810,8 @@ HingeJoint:
   m_BreakTorque: Infinity
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!54 &2082935847
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30947,6 +31854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
@@ -31070,6 +31978,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -31085,6 +31994,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -31152,6 +32062,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -31167,6 +32078,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -31221,6 +32133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ba231e7ccecd94da62492c1988272a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: 1
   BallFlingException: 0
   HitSound: {fileID: 8300000, guid: ecda523bec1b6e44c910fd3dd312799b, type: 3}
   HitSound2: {fileID: 0}
