@@ -14,7 +14,7 @@ public class UIcontroller : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        settingsPopup.Close();
+        //settingsPopup.Close();
 	}
 	
 	// Update is called once per frame
